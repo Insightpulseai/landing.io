@@ -86,12 +86,15 @@ export default function OdooCopilotPage() {
 
       {/* Header */}
       <header className="text-center mb-[60px] relative">
-        <button className="absolute top-0 right-[40px] px-7 py-3 bg-white/10 backdrop-blur-[10px] border-[1.5px] border-white/20 rounded-xl text-white text-[15px] font-semibold cursor-pointer transition-all duration-300 flex items-center gap-2 hover:bg-white/15 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)]">
+        <a
+          href="https://erp.insightpulseai.com/web/login"
+          className="absolute top-0 right-[40px] px-7 py-3 bg-white/10 backdrop-blur-[10px] border-[1.5px] border-white/20 rounded-xl text-white text-[15px] font-semibold cursor-pointer transition-all duration-300 flex items-center gap-2 hover:bg-white/15 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.2)] no-underline"
+        >
           <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
           Sign In
-        </button>
+        </a>
         <h1 className="text-5xl font-bold text-white mb-4 font-[SF_Pro_Display,-apple-system,sans-serif]">
           Odoo Copilot
         </h1>
