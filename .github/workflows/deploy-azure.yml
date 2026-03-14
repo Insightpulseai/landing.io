@@ -40,14 +40,6 @@ jobs:
             --image ${{ env.IMAGE_NAME }}:latest \
             .
 
-      - name: Update Container App registry
-        run: |
-          az containerapp registry set \
-            --name ${{ env.CONTAINER_APP }} \
-            --resource-group ${{ env.RESOURCE_GROUP }} \
-            --server ${{ env.ACR_LOGIN_SERVER }} \
-            --identity system
-
       - name: Deploy new image
         run: |
           az containerapp update \
