@@ -1,0 +1,13 @@
+# Minimal redirect shell — no Node.js, no build step
+# Returns 307 to ERP login for all requests
+FROM nginx:alpine
+
+RUN printf 'server {\n\
+    listen 80;\n\
+    server_name _;\n\
+    location / {\n\
+        return 307 https://erp.insightpulseai.com/web/login?redirect=%%2Fodoo%%3F;\n\
+    }\n\
+}\n' > /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
